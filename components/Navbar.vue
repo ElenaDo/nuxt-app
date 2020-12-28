@@ -5,10 +5,14 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <nuxt-link class="nav-link active" aria-current="page" to="/">
+              Home
+            </nuxt-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">About</a>
+            <nuxt-link class="nav-link" aria-current="page" to="/about">
+              About
+            </nuxt-link>
           </li>
         </ul>
       </div>
