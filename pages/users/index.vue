@@ -1,8 +1,8 @@
 <template>
   <section>
-    <h1>Users page</h1>
+    <h1>{{ pageTitle }}</h1>
     <ul>
-      <li v-for="user of users" :key="user">
+      <li v-for="user of users" :key="user.id">
         <a href="#" @click.prevent="openUser(user)"> {{ user.name }}</a>
       </li>
     </ul>
@@ -15,11 +15,11 @@ export default {
     return { users }
   },
   data: () => ({
-    users: []
+    pageTitle: 'Users page'
   }),
   methods: {
     openUser (user) {
-      this.$router.push('/users/' + user)
+      this.$router.push('/users/' + user.id)
     }
   }
 }
