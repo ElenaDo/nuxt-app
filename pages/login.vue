@@ -1,6 +1,6 @@
 <template>
   <section>
-    <form>
+    <form @click.prevent="onSubmit">
       <h1>Login page</h1>
       <div class="form-group">
         <input type="text" class="form-control">
@@ -18,7 +18,13 @@
 </template>
 <script>
 export default {
-  layout: 'empty'
+  layout: 'empty',
+  methods: {
+    onSubmit () {
+      this.$store.dispatch('login')
+      this.$router.push('/')
+    }
+  }
 }
 </script>
 <style scoped>
